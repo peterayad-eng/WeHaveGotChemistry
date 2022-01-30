@@ -1,0 +1,1 @@
+1.0 Basic app to upload videos, documents, homeworks, receive answers, and manage users

@@ -1,0 +1,341 @@
+html{
+    min-height:100%; 
+    position:absolute;
+    width:100%;
+}
+
+body{
+    padding:0px;
+    margin:0px;
+    width:100%;
+    min-height:100%;   
+    background-color: black;
+    }
+
+        .login-content{
+            margin:20%;
+            }
+
+        .login-logo{
+            margin-bottom:5%;
+            text-align: center;
+            }  
+
+            .imgSize{
+                width:100px;
+                height: 100px;
+            }
+
+            .logo-header{
+                margin-top: 2%;
+                color:#E34464;
+            }
+
+        .login-form{
+            width:100%;
+            background-color: white;
+            padding: 5%;
+            }
+
+        .btn-flat{
+            width:100%;
+            text-align: center;
+            padding: 2%;
+        }
+
+        .logincenter{
+            top:40%;
+        }
+
+    .navbar{
+        padding: 0% 4% 0% 0%;
+		}
+
+            .bg-ligh{
+                background-color: black;
+                border-bottom: 1px solid white;
+            }
+
+            .navbar-light .navbar-nav .nav-link{
+                color: white;
+            }
+
+            .navbar-light:hover .navbar-nav:hover .nav-link:hover{
+                color: gray;
+            }
+
+            .navbar-brand{
+                position:relative;
+                display: inline;
+            }
+            
+            .nav-t{
+                display: flex;
+                justify-content: space-between;
+                width:100%;
+            }
+
+            .nav-padd{
+                padding-left: 5%;
+                padding-right: 5%;
+                display: flex;
+            }
+
+            h1{
+                font-size:28px;
+                margin:0px;
+                padding:0px;
+            }
+
+            .username{
+                font-size: 18px;
+            }
+
+            .header-imgSize{
+                width:50px;
+                height: 50px;
+            }
+
+            .scrolled{
+                background-color: #218DF9;
+            }
+
+            .navbar-light.scrolled-item .navbar-nav.scrolled-item .nav-link.scrolled-item{
+                color: #BDD1E6;
+            }
+
+            .active>.nav-link{
+                color: gray!important;
+            }
+
+main{
+    width:100%;
+    padding: 0%;
+    margin: 0% 0% 80px 0%;
+}
+
+    .bottom{
+        position: absolute;
+        width:100%;
+        bottom: 0px;
+    }
+
+    .center, i{
+        text-align:center;	
+    }
+
+    .right{
+        text-align: right;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+    
+    h3{
+        font-size:25px;
+    }
+    .padd{
+        padding-bottom:2%;
+    }
+    .textcolor{
+        color: #41484F;
+    }
+
+    .backwhite{
+        background-color: white;
+    }
+
+    .white{
+        color: white;
+    }
+    
+    .black{
+        color:black;    
+    }
+    
+    .inline1{
+        display: inline-block;
+    }
+
+    .nopadd{
+        padding: 0%;
+    }
+
+    .nomargin{
+        margin: 0%;
+    }
+
+    .bottommargin{
+        margin-bottom: 2%;
+    }
+
+    .topmargin{
+        margin-top: 4%;
+    }
+    
+    .leftmargin{
+        margin-left:3%;
+    }
+
+    .rightmargin{
+        margin-right:7%;
+    }
+
+    .leftpadd{
+        padding-left: 20%;
+    }
+
+    .paddin{
+        padding: 5%;
+    }
+    
+    .middlevertical{
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+    }
+    
+    .justifycenter{
+        justify-content: center;
+    }
+    
+    .justifyleft{
+        justify-content: flex-start;
+    }
+
+    .verticalcenter{
+        vertical-align: middle;
+    }
+    
+    .roundborder{
+       border-radius: 20px;
+    }
+    
+    .toproundborder{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+        
+    .bottomroundborder{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+            .fullheight{
+                height:100vh;
+            }
+            
+            .height1{
+                height: 100%;
+                position: fixed;
+                width:100%;
+            }
+
+            .contain{
+                    position: relative;
+                    text-align: center;
+                    color: white;
+                    }
+
+            .card{
+                margin: 5% 5%;
+            }
+
+                .card-img-top{
+                    height:200px;
+                    width:100%;
+                }
+
+                .card-body{
+                    background-color: black;
+                    color: white;
+                }
+
+                    .card-title{
+                        height:80px;
+                    }
+
+                    .card-text{
+                        height:60px;
+                    }
+
+            .dbutton{
+                margin-bottom: 2%
+            }
+                .lbutton{
+                    padding: 1%;
+                }
+
+        #video{
+            margin-top:1%;
+            width:100%;
+        }
+
+            iframe{
+                width:99.8%;
+                height:82%;
+            }
+
+        #lesson{
+            margin-left: 12%;
+            margin-right: 12%;
+            margin-top: 5%;
+        }
+
+            .labelCenter{
+                padding-top: 1%;
+            }
+
+            .database{
+                font-size: 55px;
+            }
+
+            .btn-group>.active, .btn-success{
+                background-color: #44D5AA!important;
+                color: black!important;
+            }
+
+            .save{
+                padding:1% 2%;
+                font-size: 18px;
+            }
+
+            .buttonpadd{
+                padding: 0.5% 2%;
+            }
+
+            .editButton{
+                background-color: #44D5AA;
+                color: black;
+                padding: 1% 6%;
+            }
+
+            .resetButton{
+                background-color: #E34464;
+                padding: 1% 4%;
+            }
+
+    hr {
+      margin: 5% 15%;
+      border: 0;
+      border-top: 1px solid white;
+    }
+    
+        #users{
+                margin-top: 5%;
+            }
+    
+                table td, th {
+                  word-break: break-word;
+                }
+                
+        .footera{
+            text-decoration:none;
+            color:black;
+        }
+        
+        .footera:hover, .footera:focus{
+            text-decoration:none;
+            color:grey;
+        }
