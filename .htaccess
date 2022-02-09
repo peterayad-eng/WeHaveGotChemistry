@@ -1,4 +1,9 @@
-
-# HTID:7240992: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
-php_value display_errors 1
-# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:7240992:
+#Hide Extensions
+RewriteEngine On
+# The requested filename "/index" is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# There is a file on the file system named as the request, with extension .php
+RewriteCond %{REQUEST_FILENAME}.php -f
+# If all of the above is true, pretend that the ".php" file had been called
+# by rewriting the request appending .php
+RewriteRule ^(.*)$ $1.php

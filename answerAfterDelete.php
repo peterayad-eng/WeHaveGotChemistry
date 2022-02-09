@@ -3,40 +3,37 @@
 	session_start();
 	if(!isset($_SESSION['user']) || $_SESSION['user'] == ""){
 		if(!isset($_COOKIE['user'])){
-			header("location: page-login.php");
+			header("location: page-login");
 			exit();
 		}
 	}
 
+    require_once "session.php";
+    require_once "connect.php";	
+    $connec = new con();
+
+    $user=$_SESSION['user'];
+    $select_sql = $connec->query('SELECT id, type, level FROM users WHERE user = ?', $user)->fetchArray();
+    $type = $select_sql['type'];
+
+    if($type == "teacher"){
 		$deletedid = $_GET['id'];
-
-        require_once "connect.php";	
-		$connec = new con();
-		$conn = $connec->connect();
-
-        $file_sql = "SELECT * FROM answers WHERE id = '{$deletedid}'";
-        $fileresult = mysqli_query($conn, $file_sql);
-        $filerow = $fileresult->fetch_assoc();
-        $url=$filerow['url'];
+        $select_sql = $connec->query('SELECT * FROM answers WHERE id = ?', $deletedid)->fetchArray();
+        $url=$select_sql['url'];
         $url="answers/".$url;
 
-		$delete_sql = "DELETE FROM answers WHERE id = '{$deletedid}'";
+		$delete_sql = $connec->query('DELETE FROM answers WHERE id = ?', $deletedid);
+        unlink($url);
 
-        if ($conn->query($delete_sql) === TRUE) {
-            unlink($url);
-			$select_sql = "SELECT * FROM answers";
-			$result = mysqli_query($conn, $select_sql);
-			for($i=0;$i<$result->num_rows;$i++){
-				$row = $result->fetch_assoc();
-				$newid=$i+1;
-				$title=$row['title'];
-				$update_sql = "UPDATE answers SET id = '{$newid}' WHERE title='{$title}'";
-				$updateid = mysqli_query($conn, $update_sql);
-			}
-			$connec->disconnect($conn);
-            header("location: answersView.php?deleteerror=0");
-		} else {
-		    $connec->disconnect($conn);
-			header("location: answersView.php?deleteerror=1");
-		}
+        $connec->close();
+        $log = "2302\tInformation \t".$ip." \t".date('Y-m-d H:i:s')." \t".$_SESSION['user']." \tThe answer document: '".$select_sql['title']."' with an id: '".$deletedid."' is deleted successfully \n";
+        file_put_contents('./Logs/Web_log_'.date("Y").'.log', $log, FILE_APPEND);
+        header("location: answersView?deleteerror=0");
+        exit;
+    }else{
+        $connec->close();
+        $log = "4254\tError \t".$ip." \t".date('Y-m-d H:i:s')." \t".$_SESSION['user']." \tUnauthorized user has tried to delete answer document with an id: '".$_GET['id']."' \n";
+        file_put_contents('./Logs/Web_log_'.date("Y").'.log', $log, FILE_APPEND);
+        require_once "logout.php";
+    }
 ?>

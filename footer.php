@@ -1,6 +1,6 @@
-	<footer class="backwhite bottom">
-		<p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
-	</footer>	
+        <footer class="backwhite bottom">
+            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
+        </footer>	
 		
 		<script src="Bootstrap4.4.1/jquery-3.4.1.min.js"></script>
         <script src="Bootstrap4.4.1/popper.min.js"></script>
@@ -22,7 +22,7 @@
             var path = window.location.pathname;
             var page = path.split("/").pop();
             $(document).ready(function() {
-                if(page=="index.php"){
+                if(page=="index"){
                     items.removeClass("active");
                     home.addClass("active");
                 }
@@ -30,15 +30,15 @@
                     items.removeClass("active");
                     home.addClass("active");
                 }
-                else if(page=="users.php" || page=="usersAdd.php" || page=="usersEditData.php"){
+                else if(page=="users" || page=="usersAdd" || page=="usersEditData"){
                     items.removeClass("active");
                     user.addClass("active");
                 }
-                else if(page=="documents.php" || page=="documentsAdd.php" || page=="documentsEditData.php"){
+                else if(page=="documents" || page=="documentsAdd" || page=="documentsEditData"){
                     items.removeClass("active");
                     documents.addClass("active");
                 }
-                else if(page=="homeworks.php" || page=="answersView.php" || page=="answersAdd.php" || page=="homeworksAdd.php" || page=="homeworksEditData.php"){
+                else if(page=="homeworks" || page=="answersView" || page=="answersAdd" || page=="homeworksAdd" || page=="homeworksEditData"){
                     items.removeClass("active");
                     homework.addClass("active");
                 }

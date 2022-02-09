@@ -1,19 +1,16 @@
 <main>
     <?php
-        $user=$_SESSION['user'];
-        $select_sql = "SELECT id, type, level FROM users WHERE user = '{$user}'";
-		$result = mysqli_query($conn, $select_sql);
-        $row = $result->fetch_assoc();
-        $type = $row['type'];
-        $level = $row['level'];
         if($type == 'teacher'){
-            $select_sqlu = "SELECT id, user, type, level FROM users WHERE id>'0'";
-		    $resultu = mysqli_query($conn, $select_sqlu);
+            $select_sql = $connec->query('SELECT id, user, type, level FROM users WHERE id>0')->fetchAll();
     ?>
     <section id="users">
         <?php
             if(isset($_GET['adderror']) && $_GET['adderror'] == 0){
                 echo "<div style='color:green'>The Student Added successfully </div>";
+            }
+            
+            if(isset($_GET['editDerror']) && $_GET['editDerror'] == 0){
+                echo "<div style='color:green'>The Student data modified successfully </div>";
             }
             
             if(isset($_GET['editPerror']) && $_GET['editPerror'] == 0){
@@ -33,64 +30,63 @@
             <div class="col-1"></div>
             <div class="col-12 col-md-10 nopadd">
                 <table class="table table-dark table-striped table-bordered center">
-                  <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">Level</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                        for($i=0;$i<$resultu->num_rows;$i++){
-                            $rowu = $resultu->fetch_assoc();
-                            $id = $rowu['id'];
-                    ?>
+                    <thead>
                         <tr>
-                            <th scope="row"><?=$rowu['id']?></th>
-                            <td><?=$rowu['user']?></td>
-                            <td>
+                            <th scope="col">id</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Level</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $counter=0;
+                            foreach($select_sql as $user){
+                                $id = $user['id'];
+                                $counter++;
+                        ?>
+                            <tr>
+                                <th scope="row"><?=$counter?></th>
+                                <td><?=$user['user']?></td>
+                                <td>
+                                    <?php
+                                        if ($user['type'] == "teacher"){
+                                            echo $user['level'];
+                                        }else{
+                                            $userLevel=$user['level'];
+                                            $selectl_sql = $connec->query('SELECT level FROM levels WHERE value = ?', $userLevel)->fetchArray();
+                                            echo $selectl_sql['level'];
+                                        }
+                                    ?>
+                                </td>
                                 <?php
-                                    if ($rowu['type'] == "teacher"){
-                                        echo $rowu['level'];
+                                    if ($user['type'] != "teacher"){
+                                ?>
+                                <td><a href="usersEditData?id=<?=$id?>" class="btn btn-secondary btn-lg editButton" role="button" aria-pressed="true">Edit</a></td>
+                                <td><a href="confirmPass?flag=0&id=<?=$id?>" class="btn btn-secondary btn-lg resetButton" role="button" aria-pressed="true">Reset</a></td>
+                                <td><a href="confirmPass?flag=1&id=<?=$id?>" class="btn btn-secondary btn-lg buttonpadd" role="button" aria-pressed="true">Delete</a></td>
+                                <?php
                                     }else{
-                                        $userLevel=$rowu['level'];
-                                        $select_sqlr = "SELECT level FROM levels WHERE value = '{$userLevel}'";
-                                        $resultr = mysqli_query($conn, $select_sqlr);
-                                        $rowr = $resultr->fetch_assoc();
-                                        echo $rowr['level'];
+                                ?>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <?php
                                     }
                                 ?>
-                            </td>
-                            <?php
-                                if ($rowu['type'] != "teacher"){
-                            ?>
-                            <td><a href="usersEditData.php?id=<?=$id?>" class="btn btn-secondary btn-lg editButton" role="button" aria-pressed="true">Edit</a></td>
-                            <td><a href="confirmPass.php?flag=0&id=<?=$id?>" class="btn btn-secondary btn-lg resetButton" role="button" aria-pressed="true">Reset</a></td>
-                            <td><a href="confirmPass.php?flag=1&id=<?=$id?>" class="btn btn-secondary btn-lg buttonpadd" role="button" aria-pressed="true">Delete</a></td>
-                            <?php
-                                }else{
-                            ?>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <?php
-                                }
-                            ?>
-                        </tr> 
-                    <?php
-                        }
-                    ?>
-                  </tbody>
+                            </tr> 
+                        <?php
+                            }
+                        ?>
+                    </tbody>
                 </table>
             </div>
             <div class="col-1"></div>
         </div>
         <div class="dbutton center">
-            <a href="usersAdd.php" class="btn btn-secondary btn-lg lbutton" role="button" aria-pressed="true">Add Student</a>
+            <a href="usersAdd" class="btn btn-secondary btn-lg lbutton" role="button" aria-pressed="true">Add Student</a>
         </div>
     </section>
         <?php

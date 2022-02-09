@@ -1,1 +1,2 @@
 1.0 Basic app to upload videos, documents, homeworks, receive answers, and manage users
+1.1 improve security, add logging, and fix some bugs in answers

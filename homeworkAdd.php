@@ -1,34 +1,28 @@
 <main>
     <?php
-        $user=$_SESSION['user'];
-        $select_sql = "SELECT id, type, level FROM users WHERE user = '{$user}'";
-		$result = mysqli_query($conn, $select_sql);
-        $row = $result->fetch_assoc();
-        $type = $row['type'];
-    
         if($type == "teacher"){
     ?>
     <section id="lesson">
-        <?php
-            if(isset($_GET['adderror']) && $_GET['adderror'] == 1){
-                echo "<div style='color:red'>The Document could not be added </div>";
-            }
-            elseif(isset($_GET['adderror']) && $_GET['adderror'] == 2){
-                echo "<div style='color:red'>Homework Title Exist </div>";
-            }
-            if(isset($_GET['editLerror']) && $_GET['editLerror'] == 2){
-                echo "<div style='color:red'>The Document Must be less than 5MB </div>";
-            }
-            elseif(isset($_GET['editLerror']) && $_GET['editLerror'] == 3){
-                echo "<div style='color:red'>This File is not a document </div>";
-            }
-        ?>
         <div class="">
-           <div class="login-form roundborder">
-                 <div class="login-logo">
+            <div class="login-form roundborder">
+                <div class="login-logo">
                     <h2> Add Homework </h2>
                 </div>
-                <form  action="homeworkAfterAdd.php" method="POST" enctype="multipart/form-data">
+                <?php
+                    if(isset($_GET['adderror']) && $_GET['adderror'] == 1){
+                        echo "<div style='color:red'>The Document could not be added </div>";
+                    }
+                    elseif(isset($_GET['adderror']) && $_GET['adderror'] == 2){
+                        echo "<div style='color:red'>Homework Title Exist </div>";
+                    }
+                    if(isset($_GET['editLerror']) && $_GET['editLerror'] == 2){
+                        echo "<div style='color:red'>The Document Must be less than 50MB </div>";
+                    }
+                    elseif(isset($_GET['editLerror']) && $_GET['editLerror'] == 3){
+                        echo "<div style='color:red'>This File is not a document </div>";
+                    }
+                ?>
+                <form  action="homeworkAfterAdd" method="POST" enctype="multipart/form-data">
                     <div class="form-group row col-12 nopadd">
                         <div class="col-2 labelCenter"><label>Title</label></div>
                         <div class="col-12 col-md-9 nopadd leftmargin"><input type="text" class="form-control" placeholder="Homework Title" name="title" required></div>
@@ -38,17 +32,15 @@
                         <div class="col-12 col-md-9 nopadd leftmargin"><input type="text" class="form-control" placeholder="Paragraph" name="par"></div>
                     </div>
                     
-                     <div class="form-group row col-12 nopadd bottommargin">
+                    <div class="form-group row col-12 nopadd bottommargin">
                         <div class="col-6 col-md-2 labelCenter"><label>Level</label></div>
                         <div class="btn-group btn-group-toggle col-9 col-md-8 col-lg-7" data-toggle="buttons">
                             <?php
-                                $selectr_sql = "SELECT * FROM levels";
-                                $resultr = mysqli_query($conn, $selectr_sql);
-                                for($i=0;$i<$resultr->num_rows;$i++){
-                                    $rowr = $resultr->fetch_assoc();
+                                $selectl_sql = $connec->query('SELECT * FROM levels')->fetchAll();
+                                foreach($selectl_sql as $level){
                             ?> 
-                                    <label class="btn btn-secondary <?php if($rowr['id'] == 0){echo 'active';} ?>">
-                                        <input type="radio" name="level" value="<?=$rowr['value']?>" <?php if($rowr['id'] == 0){echo 'checked';} ?>> <?=$rowr['level']?>
+                                    <label class="btn btn-secondary <?php if($level['id'] == 0){echo 'active';} ?>">
+                                        <input type="radio" name="level" value="<?=$level['value']?>" <?php if($level['id'] == 0){echo 'checked';} ?>> <?=$level['level']?>
                                     </label>
                             <?php
                                 }

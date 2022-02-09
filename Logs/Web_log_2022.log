@@ -1,0 +1,144 @@
+4202	Error 	Unknown 	2022-01-31 13:13:04 	admin 	The user has tried to log in with the wrong password: 'lskdnfoisen'and the number of attempts is 3 
+4222	Error 	Unknown 	2022-01-31 13:13:12 	uiedf 	Anonymous user has tried to log in with password: 'ewfwef'and the number of attempts is 4 
+4222	Error 	Unknown 	2022-01-31 13:13:30 	ewfew 	Anonymous user has tried to log in with password: 'wefwef'and the number of attempts is 5 
+4223	Error 	Unknown 	2022-01-31 13:13:35 	rgrf 	Anonymous user has tried to log in with password: 'wrgreg', and the number of attempts has exceeded the limit 
+2261	Information 	Unknown 	2022-01-31 13:38:54 	 	The password has been reset successfully for the user that has an id: '0' 
+
+2201	Information 	Unknown 	2022-01-31 13:47:30 	admin 	The user has logged in successfully 
+2201	Information 	Unknown 	2022-01-31 22:25:50 	admin 	The user has logged in successfully 
+3322	Warning 	Unknown 	2022-01-31 22:33:21 	admin 	The user has tried to add a lesson with Image: 'Peter Ayad.pdf' that has an unallowed extension, and Image size: '226152' 
+3321	Warning 	Unknown 	2022-01-31 22:45:07 	admin 	The user has tried to add a lesson with an oversized Image: '20210920_144200.jpg', and Image size: '5456015' 
+2301	Information 	Unknown 	2022-01-31 22:45:42 	admin 	The user has added a lesson: 'Lesson5' with an id: '6' successfully 
+2301	Information 	Unknown 	2022-01-31 22:46:40 	admin 	The user has added a lesson: 'Lesson 5' with an id: '7' successfully 
+2301	Information 	Unknown 	2022-01-31 22:49:11 	admin 	The user has added a lesson: 'Lesson 5' with an id: '8' successfully 
+3301	Warning 	Unknown 	2022-01-31 22:51:06 	admin 	The user has tried to add a lesson: 'Lesson 5' that is already exist 
+2202	Information 	Unknown 	2022-02-01 08:25:08 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-01 08:25:19 	admin 	The user has logged in successfully 
+2202	Information 	 	2022-02-01 08:51:59 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-01 09:52:06 	admin 	The user has logged in successfully 
+2351	Information 	Unknown 	2022-02-01 09:52:17 	admin 	The lesson: '' with an id: '6' data is updated successfully 
+2351	Information 	Unknown 	2022-02-01 09:52:24 	admin 	The lesson: '' with an id: '6' data is updated successfully 
+3351	Warning 	Unknown 	2022-02-01 09:52:48 	admin 	The lesson: '' with an id: '8' data could not be updated because the targeted label is already exist 
+3351	Warning 	Unknown 	2022-02-01 09:52:59 	admin 	The lesson: '' with an id: '8' data could not be updated because the targeted label is already exist 
+2351	Information 	Unknown 	2022-02-01 09:53:30 	admin 	The lesson: '' with an id: '8' data is updated successfully 
+2202	Information 	 	2022-02-01 09:50:18 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-01 10:50:24 	admin 	The user has logged in successfully 
+3361	Warning 	Unknown 	2022-02-01 10:50:36 	admin 	The user has tried to edit the image of the lesson that has an id: '8' with an oversized Image: '20210920_144200.jpg', and Image size: '5456015' 
+2202	Information 	 	2022-02-01 10:32:12 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-01 11:32:17 	admin 	The user has logged in successfully 
+3361	Warning 	Unknown 	2022-02-01 11:32:38 	admin 	The user has tried to edit the image of the lesson that has an id: '8' with an oversized Image: '20210920_144200.jpg', and Image size: '5456015' 
+3362	Warning 	Unknown 	2022-02-01 11:32:52 	admin 	The user has tried to update the image of the lesson that has an id: '8' with Image: 'Micheal Michel CV.pdf' that has an unallowed extension, and Image size: '144520' 
+2361	Information 	Unknown 	2022-02-01 11:33:31 	admin 	The lesson: 'Lesson 6' with an id: '8' image is updated successfully 
+2302	Information 	Unknown 	2022-02-01 11:42:51 	admin 	The lesson: 'Lesson 5' with an id: '7' is deleted successfully 
+2302	Information 	Unknown 	2022-02-01 11:43:50 	admin 	The lesson: 'Lesson5' with an id: '6' is deleted successfully 
+2301	Information 	Unknown 	2022-02-01 11:44:16 	admin 	The user has added a lesson: 'biub' with an id: '9' successfully 
+2202	Information 	 	2022-02-01 13:01:04 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-01 14:01:14 	admin 	The user has logged in successfully 
+2302	Information 	Unknown 	2022-02-01 14:01:20 	admin 	The lesson: 'biub' with an id: '9' is deleted successfully 
+2302	Information 	Unknown 	2022-02-01 14:01:29 	admin 	The lesson: 'Lesson 6' with an id: '8' is deleted successfully 
+2202	Information 	Unknown 	2022-02-02 08:12:20 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-02 08:12:26 	admin 	The user has logged in successfully 
+2202	Information 	 	2022-02-02 08:47:52 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-02 09:47:58 	admin 	The user has logged in successfully 
+3322	Warning 	Unknown 	2022-02-02 09:48:23 	admin 	The user has tried to add a document: 'Lesson5.jpg' that has an unallowed extension, and document size: '35366' 
+3321	Warning 	Unknown 	2022-02-02 09:59:32 	admin 	The user has tried to add an oversized document: 'Foundations of financial management by Block, Stanley B. Danielsen, Bartley R. Hirt, Geoffrey A..pdf', and document size: '21437691' 
+2301	Information 	Unknown 	2022-02-02 10:00:30 	admin 	The user has added a document: 'Doc4' with an id: '6' successfully 
+3301	Warning 	Unknown 	2022-02-02 10:03:02 	admin 	The user has tried to add a document: 'Doc4' that is already exist 
+2301	Information 	Unknown 	2022-02-02 10:27:23 	admin 	The user has added a document: 'Doc5' with an id: '7' successfully 
+2351	Information 	Unknown 	2022-02-02 11:04:04 	admin 	The document: 'Doc5' with an id: '7' data is updated successfully 
+3351	Warning 	Unknown 	2022-02-02 11:04:11 	admin 	The document: 'Doc4' with an id: '6' data could not be updated because the targeted title is already exist 
+2202	Information 	 	2022-02-02 10:35:36 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-02 11:35:43 	admin 	The user has logged in successfully 
+2302	Information 	Unknown 	2022-02-02 11:35:54 	admin 	The document: 'Doc4' with an id: '6' is deleted successfully 
+2302	Information 	Unknown 	2022-02-02 11:36:27 	admin 	The document: 'Doc5' with an id: '7' is deleted successfully 
+2202	Information 	 	2022-02-02 12:38:13 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-02 13:38:22 	admin 	The user has logged in successfully 
+3301	Warning 	Unknown 	2022-02-02 13:38:42 	admin 	The user has tried to add a homework document: 'Homework1' that is already exist 
+2202	Information 	Unknown 	2022-02-02 15:08:49 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-02 15:08:55 	admin 	The user has logged in successfully 
+3301	Warning 	Unknown 	2022-02-02 15:09:40 	admin 	The user has tried to add a homework document: 'Homework4' that is already exist 
+3322	Warning 	Unknown 	2022-02-02 15:09:50 	admin 	The user has tried to add a homework document: '20210920_144200.jpg' that has an unallowed extension, and document size: '5456015' 
+3321	Warning 	Unknown 	2022-02-02 15:10:59 	admin 	The user has tried to add an oversized homework document: 'Financial management principles and applications by Keown, Arthur J. Martin, John D. Titman, Sheridan.pdf', and document size: '35904064' 
+2301	Information 	Unknown 	2022-02-02 15:11:20 	admin 	The user has added a homework document: 'Homework5' with an id: '5' successfully 
+3351	Warning 	Unknown 	2022-02-02 15:47:52 	admin 	The homework document: 'Homework4' with an id: '5' data could not be updated because the targeted title is already exist 
+2351	Information 	Unknown 	2022-02-02 15:48:03 	admin 	The homework document: 'Homework7' with an id: '5' data is updated successfully 
+2201	Information 	Unknown 	2022-02-05 13:14:56 	admin 	The user has logged in successfully 
+2281	Information 	Unknown 	2022-02-05 13:49:42 	admin 	The user has added a student: 'peter' with an id: '5' successfully 
+2202	Information 	 	2022-02-05 12:54:13 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-05 13:54:24 	peter 	The user has logged in successfully 
+2202	Information 	 	2022-02-05 12:54:53 	peter 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-05 13:55:01 	admin 	The user has logged in successfully 
+2351	Information 	Unknown 	2022-02-05 14:28:03 	admin 	The student: 'admin' with an id: '5' data is updated successfully 
+2351	Information 	Unknown 	2022-02-05 14:31:17 	admin 	The student: 'peterayad' with an id: '5' data is updated successfully 
+2202	Information 	 	2022-02-06 08:40:34 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 09:41:45 	admin 	The user has logged in successfully 
+2202	Information 	 	2022-02-06 10:43:13 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 11:43:26 	admin 	The user has logged in successfully 
+2351	Information 	Unknown 	2022-02-06 11:43:33 	admin 	The student: 'peterayad' with an id: '5' data is updated successfully 
+2351	Information 	Unknown 	2022-02-06 11:43:38 	admin 	The student: 'peterayad' with an id: '5' data is updated successfully 
+2351	Information 	Unknown 	2022-02-06 11:45:11 	admin 	The student: 'peterayad' with an id: '5' data is updated successfully 
+4242	Error 	Unknown 	2022-02-06 11:54:47 	admin 	The user has failed to confirm password: 'dfhdfgd'and the number of attempts is 1 while changing the password for the user that has an id: '5' 
+4242	Error 	Unknown 	2022-02-06 11:55:01 	admin 	The user has failed to confirm password: 'sddgdg'and the number of attempts is 2 while changing the password for the user that has an id: '5' 
+4242	Error 	Unknown 	2022-02-06 11:55:10 	admin 	The user has failed to confirm password: 'fhfth'and the number of attempts is 3 while changing the password for the user that has an id: '5' 
+4242	Error 	Unknown 	2022-02-06 11:56:06 	admin 	The user has failed to confirm password: 'gjjyjy'and the number of attempts is 4 while changing the password for the user that has an id: '5' 
+4242	Error 	Unknown 	2022-02-06 11:56:19 	admin 	The user has failed to confirm password: 'tiuku'and the number of attempts is 5 while changing the password for the user that has an id: '5' 
+4243	Error 	Unknown 	2022-02-06 11:57:05 	admin 	The user has failed to confirm his password: 'fjgyyj', and the number of attempts has exceeded the limit while changing the password for the user that has an id: '5' 
+2241	Information 	Unknown 	2022-02-06 11:59:00 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '5' 
+2202	Information 	 	2022-02-06 12:21:53 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 13:22:09 	admin 	The user has logged in successfully 
+2241	Information 	Unknown 	2022-02-06 13:22:30 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '5' 
+2261	Information 	Unknown 	2022-02-06 13:22:39 	admin 	The password has been reset successfully for the user that has an id: '5' 
+2241	Information 	Unknown 	2022-02-06 13:22:55 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '5' 
+3261	Warning 	Unknown 	2022-02-06 13:22:59 	admin 	The user has failed to reset the password while changing the password for the user that has an id: '5' because the confirm password did not match 
+2202	Information 	 	2022-02-06 12:23:35 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 13:23:47 	peterayad 	The user has logged in successfully 
+2202	Information 	 	2022-02-06 12:23:51 	peterayad 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 13:24:00 	admin 	The user has logged in successfully 
+2242	Information 	Unknown 	2022-02-06 13:32:56 	admin 	The user has confirmed his password successfully to delete the user that has an id: '5' 
+2302	Information 	Unknown 	2022-02-06 13:32:56 	admin 	The user with an id: '5' is deleted successfully 
+2202	Information 	Unknown 	2022-02-06 14:14:19 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-06 14:14:28 	admin 	The user has logged in successfully 
+2241	Information 	Unknown 	2022-02-06 14:15:45 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '2' 
+2261	Information 	Unknown 	2022-02-06 14:15:51 	admin 	The password has been reset successfully for the user that has an id: '2' 
+2351	Information 	Unknown 	2022-02-06 14:16:26 	admin 	The student: 'student2' with an id: '3' data is updated successfully 
+2241	Information 	Unknown 	2022-02-06 14:16:35 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '3' 
+2261	Information 	Unknown 	2022-02-06 14:16:40 	admin 	The password has been reset successfully for the user that has an id: '3' 
+2241	Information 	Unknown 	2022-02-06 14:16:52 	admin 	The user has confirmed his password successfully to change the password for the user that has an id: '4' 
+2261	Information 	Unknown 	2022-02-06 14:16:58 	admin 	The password has been reset successfully for the user that has an id: '4' 
+2201	Information 	Unknown 	2022-02-07 10:24:14 	student 	The user has logged in successfully 
+2202	Information 	Unknown 	2022-02-09 09:20:35 	student 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 09:20:51 	admin 	The user has logged in successfully 
+2202	Information 	 	2022-02-09 08:28:35 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 09:28:48 	student 	The user has logged in successfully 
+2202	Information 	 	2022-02-09 08:28:58 	student 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 09:29:08 	student2 	The user has logged in successfully 
+2202	Information 	 	2022-02-09 08:29:15 	student2 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 09:31:57 	student4 	The user has logged in successfully 
+3321	Warning 	Unknown 	2022-02-09 09:48:44 	student4 	The student has tried to add an oversized answer document: 'Fundamentals_of_Financial_Management_Ele.pdf', and document size: '10633326' for the homework: 'Homework4' 
+3321	Warning 	Unknown 	2022-02-09 09:48:53 	student4 	The student has tried to add an oversized answer document: 'Fundamentals_of_Financial_Management_Ele.pdf', and document size: '10633326' for the homework: 'Homework4' 
+3321	Warning 	Unknown 	2022-02-09 09:50:20 	student4 	The student has tried to add an oversized answer document: 'Fundamentals_of_Financial_Management_Ele.pdf', and document size: '10633326' for the homework: 'Homework4' 
+3322	Warning 	Unknown 	2022-02-09 09:50:51 	student4 	The student has tried to add an answer document: '20210920_144200.jpg' that has an unallowed extension, and document size: '5456015' 
+2301	Information 	Unknown 	2022-02-09 09:51:39 	student4 	The student has added an answer document: 'Fundamentals_of_Financial_Management_Ele.pdf' for the homework: 'Homework4' successfully 
+2301	Information 	Unknown 	2022-02-09 09:53:31 	student4 	The student has added an answer document: 'Peter Ayad.pdf' for the homework: 'Homework4' successfully 
+2301	Information 	Unknown 	2022-02-09 09:56:43 	student4 	The student has added an answer document: 'Fundamentals_of_Financial_Management_Ele.pdf' for the homework: 'Homework4' successfully 
+2301	Information 	Unknown 	2022-02-09 09:57:16 	student4 	The student has added an answer document: 'aFundamentals_of_Financial_Management_Ele.pdf' for the homework: 'Homework3' successfully 
+2202	Information 	 	2022-02-09 08:57:34 	student4 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 09:57:43 	admin 	The user has logged in successfully 
+2302	Information 	Unknown 	2022-02-09 09:58:26 	admin 	The answer document: 'student4-Homework4' with an id: '4' is deleted successfully 
+2302	Information 	Unknown 	2022-02-09 09:59:45 	admin 	The answer document: 'student4-Homework3' with an id: '5' is deleted successfully 
+2202	Information 	Unknown 	2022-02-09 11:01:12 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 11:01:21 	admin 	The user has logged in successfully 
+2351	Information 	Unknown 	2022-02-09 11:01:41 	admin 	The homework document: 'Homework7' with an id: '5' data is updated successfully 
+2281	Information 	Unknown 	2022-02-09 11:02:00 	admin 	The user has added a student: 'peter' with an id: '5' successfully 
+2202	Information 	 	2022-02-09 10:02:13 	admin 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 11:02:20 	peter 	The user has logged in successfully 
+2301	Information 	Unknown 	2022-02-09 11:02:35 	peter 	The student has added an answer document: 'Fundamentals_of_Financial_Management_Ele.pdf' for the homework: 'Homework2' successfully 
+2301	Information 	Unknown 	2022-02-09 11:03:10 	peter 	The student has added an answer document: 'Peter Ayad.pdf' for the homework: 'Homework3' successfully 
+2301	Information 	Unknown 	2022-02-09 11:03:39 	peter 	The student has added an answer document: 'Micheal Michel CV.pdf' for the homework: 'Homework7' successfully 
+2202	Information 	 	2022-02-09 10:04:17 	peter 	The user has logged out successfully 
+2201	Information 	Unknown 	2022-02-09 11:04:25 	admin 	The user has logged in successfully 
+2303	Information 	Unknown 	2022-02-09 11:05:03 	admin 	The homework document: '' with an id: '5' is deleted successfully 
+2304	Information 	Unknown 	2022-02-09 11:05:03 	admin 	The answers for this deleted homework document: '' has been assigned for homework id -1 
+2242	Information 	Unknown 	2022-02-09 11:09:35 	admin 	The user has confirmed his password successfully to delete the user that has an id: '5' 
+2302	Information 	Unknown 	2022-02-09 11:09:35 	admin 	The user with an id: '5' is deleted successfully 
+2305	Information 	Unknown 	2022-02-09 11:09:35 	admin 	All answers for the deleted student: '5' has been deleted successfully 

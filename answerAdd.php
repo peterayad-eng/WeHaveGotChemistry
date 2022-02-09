@@ -1,50 +1,36 @@
 <main>
-    <?php
-        $user=$_SESSION['user'];
-        $select_sql = "SELECT id, type, level FROM users WHERE user = '{$user}'";
-		$result = mysqli_query($conn, $select_sql);
-        $row = $result->fetch_assoc();
-        $type = $row['type'];
-        $level = $row['level'];
-         
-    ?>
     <section id="lesson">
-        <?php
-            if(isset($_GET['adderror']) && $_GET['adderror'] == 1){
-                echo "<div style='color:red'>The Document could not be added </div>";
-            }
-            elseif(isset($_GET['adderror']) && $_GET['adderror'] == 2){
-                echo "<div style='color:red'>Please, select homework </div>";
-            }
-            if(isset($_GET['editLerror']) && $_GET['editLerror'] == 2){
-                echo "<div style='color:red'>The Document Must be less than 5MB  </div>";
-            }
-            elseif(isset($_GET['editLerror']) && $_GET['editLerror'] == 3){
-                echo "<div style='color:red'>This File is not a document </div>";
-            }
-        ?>
         <div class="">
-           <div class="login-form roundborder">
-                 <div class="login-logo">
+            <div class="login-form roundborder">
+                <div class="login-logo">
                     <h2> Add Answer </h2>
                 </div>
-                <form  action="answerAfterAdd.php" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="user" value="<?=$user?>"/>
-                    <input type="hidden" name="level" value="<?=$level?>"/>
-                   <div class="form-group row col-12 nopadd">
+                <?php
+                    if(isset($_GET['adderror']) && $_GET['adderror'] == 1){
+                        echo "<div style='color:red'>The Document could not be added </div>";
+                    }
+                    elseif(isset($_GET['adderror']) && $_GET['adderror'] == 2){
+                        echo "<div style='color:red'>Please, select homework </div>";
+                    }
+                    if(isset($_GET['editLerror']) && $_GET['editLerror'] == 2){
+                        echo "<div style='color:red'>The Document Must be less than 50MB  </div>";
+                    }
+                    elseif(isset($_GET['editLerror']) && $_GET['editLerror'] == 3){
+                        echo "<div style='color:red'>This File is not a document </div>";
+                    }
+                ?>
+                <form  action="answerAfterAdd" method="POST" enctype="multipart/form-data">
+                    <div class="form-group row col-12 nopadd">
                         <div class="col-12 col-md-4 col-lg-3 labelCenter"><label>This Answer for</label></div>
-                       <div class="col-12 col-md-7 col-lg-8 nopadd leftmargin">
+                        <div class="col-12 col-md-7 col-lg-8 nopadd leftmargin">
                             <select class="form-control" name="homework" required>
                                 <option value="" selected disabled>Select Homework</option>
                             <?php
-                                $selecth_sql = "SELECT * FROM homework WHERE level = '{$level}' OR level = 'All'";
-                                $resulth = mysqli_query($conn, $selecth_sql);
-                                $num = $resulth->num_rows;
-                                for($i=0;$i<$num;$i++){
-                                    $rowh = $resulth->fetch_assoc();
-                                    $title = $rowh['title'];
+                                $select_sql = $connec->query('SELECT * FROM homework WHERE level = ? OR level = "All"', $level)->fetchAll();
+                                foreach($select_sql as $homework){
+                                    $title = $homework['title'];
                             ?>
-                                    <option value="<?=$title?>"><?=$title?></option>
+                                    <option value="<?=$homework['id']?>"><?=$title?></option>
                             <?php
                                 }
                             ?>

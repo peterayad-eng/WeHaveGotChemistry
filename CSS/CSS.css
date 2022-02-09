@@ -10,16 +10,16 @@ body{
     width:100%;
     min-height:100%;   
     background-color: black;
-    }
+}
 
         .login-content{
             margin:20%;
-            }
+        }
 
         .login-logo{
             margin-bottom:5%;
             text-align: center;
-            }  
+        }  
 
             .imgSize{
                 width:100px;
@@ -35,6 +35,10 @@ body{
             width:100%;
             background-color: white;
             padding: 5%;
+        }
+
+            .verifyingcode{
+                display:none;
             }
 
         .btn-flat{
@@ -49,7 +53,7 @@ body{
 
     .navbar{
         padding: 0% 4% 0% 0%;
-		}
+    }
 
             .bg-ligh{
                 background-color: black;
@@ -233,10 +237,10 @@ main{
             }
 
             .contain{
-                    position: relative;
-                    text-align: center;
-                    color: white;
-                    }
+                position: relative;
+                text-align: center;
+                color: white;
+            }
 
             .card{
                 margin: 5% 5%;
@@ -323,11 +327,11 @@ main{
     }
     
         #users{
-                margin-top: 5%;
-            }
+            margin-top: 5%;
+        }
     
                 table td, th {
-                  word-break: break-word;
+                    word-break: break-word;
                 }
                 
         .footera{
