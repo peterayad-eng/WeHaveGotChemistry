@@ -34,7 +34,7 @@
                     items.removeClass("active");
                     user.addClass("active");
                 }
-                else if(page=="documents" || page=="documentsAdd" || page=="documentsEditData"){
+                else if(page=="document" || page=="documentsAdd" || page=="documentsEditData"){
                     items.removeClass("active");
                     documents.addClass("active");
                 }
