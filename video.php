@@ -9,6 +9,6 @@
     ?>
     <section id="video">
          <div class="center white"><?php echo $caption; ?></div>
-         <div  class="height1"><iframe src="<?=$url?>"></iframe></div>
+         <div  class="height1"><iframe src="<?=$url?>" sandbox='allow-same-origin allow-scripts'></iframe><div style="width: 80px; height: 80px; position: absolute; opacity: 0; right: 0px; top: 0px;"></div></div>
     </section>
 </main>
