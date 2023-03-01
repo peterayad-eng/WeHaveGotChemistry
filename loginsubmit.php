@@ -51,8 +51,12 @@
                     }
                     session_start();
                     $_SESSION['user'] = $user;
+                    if(isset($_SESSION['url'])) 
+                        $surl = $_SESSION['url'];
+                    else 
+                        $surl = "index";
                     $connec->close();
-                    header("location: index");
+                    header("location: $surl");
                     exit;
                 }
             }else{
@@ -182,8 +186,12 @@
                         }
                         session_start();
                         $_SESSION['user'] = $user;
+                        if(isset($_SESSION['url'])) 
+                            $surl = $_SESSION['url'];
+                        else 
+                            $surl = "index";
                         $connec->close();
-                        header("location: index");
+                        header("location: $surl");
                         exit;
                     }
                 }else{
