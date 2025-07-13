@@ -47,36 +47,38 @@
 	</head>
     
 	<body>
-        <header class="navbar navbar-expand-md navbar-light bg-ligh">
-            <?php
-                $user=$_SESSION['user'];
-                $select_sql = $connec->query('SELECT id, type, level FROM users WHERE user = ?', $user)->fetchArray();
-                $type = $select_sql['type'];
-                $level = $select_sql['level'];
-            ?>
-            <div class="nav-t nav-padd">
-            <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="form-inline">
-                    <a class="navbar-brand" href="index"><h1 class="textcolor"><img class="align-content header-imgSize" src="Images/logo.jpg" alt="Web Class"></h1></a>
-                    <h2 class="white username">Hello, <?=$user?></h2>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-                    
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse nav-t" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li id="home-nav" class="nav-item active"><a href="index" class="nav-link">Videos</a></li>
-                    <li id="documents-nav" class="nav-item"><a href="document" class="nav-link">Documents</a></li>
-                    <li id="homeworks-nav" class="nav-item"><a href="homeworks" class="nav-link">Homework</a></li>
-                    <?php
-                        if($type == 'teacher'){
-                            echo '<li id="users-nav" class="nav-item"><a href="users" class="nav-link">Users</a></li>';
-                        }
-                    ?>
-                    <li id="logout" class="nav-item"><a href="logout" class="nav-link">Logout</a></li>
-                </ul>
-            </div>
-        </header>
+		<section id="fixedbg"></section>
+        	<section id="content">
+		        <header class="navbar navbar-expand-md navbar-light bg-ligh">
+		            <?php
+		                $user=$_SESSION['user'];
+		                $select_sql = $connec->query('SELECT id, type, level FROM users WHERE user = ?', $user)->fetchArray();
+		                $type = $select_sql['type'];
+		                $level = $select_sql['level'];
+		            ?>
+		            <div class="nav-t nav-padd">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		                <div class="form-inline">
+		                    <a class="navbar-brand" href="index"><h1 class="textcolor"><img class="align-content header-imgSize" src="Images/logo.jpg" alt="Web Class"></h1></a>
+		                    <h2 class="white username">Hello, <?=$user?></h2>
+		                </div>
+		                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		                    <span class="navbar-toggler-icon"></span>
+		                </button>
+		            </div>
+		                    
+		            <!-- Collect the nav links, forms, and other content for toggling -->
+		            <div class="collapse navbar-collapse nav-t" id="navbarSupportedContent">
+		                <ul class="navbar-nav ml-auto">
+		                    <li id="home-nav" class="nav-item active"><a href="index" class="nav-link">Videos</a></li>
+		                    <li id="documents-nav" class="nav-item"><a href="document" class="nav-link">Documents</a></li>
+		                    <li id="homeworks-nav" class="nav-item"><a href="homeworks" class="nav-link">Homework</a></li>
+		                    <?php
+		                        if($type == 'teacher'){
+		                            echo '<li id="users-nav" class="nav-item"><a href="users" class="nav-link">Users</a></li>';
+		                        }
+		                    ?>
+		                    <li id="logout" class="nav-item"><a href="logout" class="nav-link">Logout</a></li>
+		                </ul>
+		            </div>
+		        </header>
