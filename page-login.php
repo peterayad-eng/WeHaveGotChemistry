@@ -48,71 +48,73 @@
 	</head>
     
 	<body>
-        <div class="sufee-login d-flex align-content-center flex-wrap">
-            <div class="container">
-                <div class="login-content">
-                    <div class="login-logo">
-                        <a href="index">
-                            <img class="align-content imgSize roundborder" src="Images/logo.jpg" alt="Web Class">
-                        </a>
-                        <h1 class="logo-header"> Dr. Maggy Maher </h1>
-                    </div>
-                    <div class="login-form roundborder">
-                        <div class="login-logo">
-                            <h2> Login To Your Web Class </h2>
-                        </div>
-                        <?php
-                            if(isset($_GET['error']) && $_GET['error'] == 1){
-                                echo "<div style='color:red'>The username or password isn't correct</div>";
-                            }
-                            else if(isset($_GET['error']) && $_GET['error'] == 2){
-                                echo "<div style='color:red'>You have exceeded the number of attempts. Please, try again later</div>";
-                            }
-
-                            function get_client_ip(){
-                                $str="Unknown";
-                                foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
-                                    if (array_key_exists($key, $_SERVER) === true){
-                                        foreach (explode(',', $_SERVER[$key]) as $ip){
-                                            $ip = trim($ip); 
-
-                                            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false){
-                                                $str = $key." is ".$ip."    ";;
-                                            }
-                                        }
-                                    }
-                                }
-                                return $str;
-                            }
-
-                            $ip = get_client_ip();
-                        ?>
-                        <form  action="loginsubmit" method="POST" enctype="multipart/form-data">
-                            <input id='ip' name='ip' value='<?=$ip?>' type='hidden'/>
-                            <div class="form-group">
-                                <label>User Name</label>
-                                <input type="text" class="form-control" placeholder="User Name" name="user" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="pass" required>
-                            </div>
-                            <div class="verifyingcode"><input id="verifyingcode" name="verifyingcode" type="text" placeholder='Verifying code' class="verifyingcode"/></div>
-
-                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="backwhite bottom">
-            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
-        </footer>	
+		<section id="fixedbg"></section>
+        	<section id="content">
+		        <div class="sufee-login d-flex align-content-center flex-wrap">
+		            <div class="container">
+		                <div class="login-content">
+		                    <div class="login-logo">
+		                        <a href="index">
+		                            <img class="align-content imgSize roundborder" src="Images/logo.jpg" alt="Web Class">
+		                        </a>
+		                        <h1 class="logo-header"> Dr. Maggy Maher </h1>
+		                    </div>
+		                    <div class="login-form roundborder">
+		                        <div class="login-logo">
+		                            <h2> Login To Your Web Class </h2>
+		                        </div>
+		                        <?php
+		                            if(isset($_GET['error']) && $_GET['error'] == 1){
+		                                echo "<div style='color:red'>The username or password isn't correct</div>";
+		                            }
+		                            else if(isset($_GET['error']) && $_GET['error'] == 2){
+		                                echo "<div style='color:red'>You have exceeded the number of attempts. Please, try again later</div>";
+		                            }
 		
+		                            function get_client_ip(){
+		                                $str="Unknown";
+		                                foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
+		                                    if (array_key_exists($key, $_SERVER) === true){
+		                                        foreach (explode(',', $_SERVER[$key]) as $ip){
+		                                            $ip = trim($ip); 
+		
+		                                            if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false){
+		                                                $str = $key." is ".$ip."    ";;
+		                                            }
+		                                        }
+		                                    }
+		                                }
+		                                return $str;
+		                            }
+		
+		                            $ip = get_client_ip();
+		                        ?>
+		                        <form  action="loginsubmit" method="POST" enctype="multipart/form-data">
+		                            <input id='ip' name='ip' value='<?=$ip?>' type='hidden'/>
+		                            <div class="form-group">
+		                                <label>User Name</label>
+		                                <input type="text" class="form-control" placeholder="User Name" name="user" required>
+		                            </div>
+		                            <div class="form-group">
+		                                <label>Password</label>
+		                                <input type="password" class="form-control" placeholder="Password" name="pass" required>
+		                            </div>
+		                            <div class="verifyingcode"><input id="verifyingcode" name="verifyingcode" type="text" placeholder='Verifying code' class="verifyingcode"/></div>
+		
+		                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+		                        </form>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		
+		        <footer class="backwhite bottom">
+		            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
+		        </footer>	
+		</section>
 		<script src="Bootstrap4.4.1/jquery-3.4.1.min.js"></script>
-        <script src="Bootstrap4.4.1/popper.min.js"></script>
-        <script src="Bootstrap4.4.1/js/bootstrap.min.js"></script>
-        <script src="JS/main.js"></script>
-    </body>
+	        <script src="Bootstrap4.4.1/popper.min.js"></script>
+	        <script src="Bootstrap4.4.1/js/bootstrap.min.js"></script>
+	        <script src="JS/main.js"></script>
+	</body>
 </html>
