@@ -56,51 +56,54 @@
 	</head>
     
 	<body>
-        <div class="sufee-login d-flex align-content-center flex-wrap">
-            <div class="container">
-                <div class="login-content">
-                    <div class="login-logo">
-                        <a href="index">
-                            <img class="align-content imgSize roundborder" src="Images/logo.jpg" alt="Web Class">
-                        </a>
-                        <h1 class="logo-header"> Dr. Maggy Maher </h1>
-                    </div>
-                    <div class="login-form roundborder">
-                        <div class="login-logo">
-                            <h2> Please, Confirm Your Password </h2>
-                        </div>
-                        <?php
-                            $id = $_GET['id'];
-                            $flag = $_GET['flag'];
-
-                            if(isset($_GET['error']) && $_GET['error'] == 1){
-                                echo "<div style='color:red'>The username or password isn't correct</div>";
-                            }if(isset($_GET['error']) && $_GET['error'] == 2){
-                                echo "<div style='color:red'>You have exceeded the number of attempts. Please, try again later</div>";
-                            }
-                        ?>
-                        <form  action="confirmPassSubmit" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?=$id?>"/>
-                            <input type="hidden" name="flag" value="<?=$flag?>"/>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="pass">
-                            </div>
-
-                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Confirm</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer class="backwhite bottom">
-            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
-        </footer>	
+		<section id="fixedbg"></section>
+        	<section id="content">
+		        <div class="sufee-login d-flex align-content-center flex-wrap">
+		            <div class="container">
+		                <div class="login-content">
+		                    <div class="login-logo">
+		                        <a href="index">
+		                            <img class="align-content imgSize roundborder" src="Images/logo.jpg" alt="Web Class">
+		                        </a>
+		                        <h1 class="logo-header"> Dr. Maggy Maher </h1>
+		                    </div>
+		                    <div class="login-form roundborder">
+		                        <div class="login-logo">
+		                            <h2> Please, Confirm Your Password </h2>
+		                        </div>
+		                        <?php
+		                            $id = $_GET['id'];
+		                            $flag = $_GET['flag'];
+		
+		                            if(isset($_GET['error']) && $_GET['error'] == 1){
+		                                echo "<div style='color:red'>The username or password isn't correct</div>";
+		                            }if(isset($_GET['error']) && $_GET['error'] == 2){
+		                                echo "<div style='color:red'>You have exceeded the number of attempts. Please, try again later</div>";
+		                            }
+		                        ?>
+		                        <form  action="confirmPassSubmit" method="POST" enctype="multipart/form-data">
+		                            <input type="hidden" name="id" value="<?=$id?>"/>
+		                            <input type="hidden" name="flag" value="<?=$flag?>"/>
+		                            <div class="form-group">
+		                                <label>Password</label>
+		                                <input type="password" class="form-control" placeholder="Password" name="pass">
+		                            </div>
+		
+		                            <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Confirm</button>
+		                        </form>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		
+		        <footer class="backwhite bottom">
+		            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
+		        </footer>	
+		</section>
 		
 		<script src="Bootstrap4.4.1/jquery-3.4.1.min.js"></script>
-        <script src="Bootstrap4.4.1/popper.min.js"></script>
-        <script src="Bootstrap4.4.1/js/bootstrap.min.js"></script>
-        <script src="JS/main.js"></script>
-    </body>
+	        <script src="Bootstrap4.4.1/popper.min.js"></script>
+	        <script src="Bootstrap4.4.1/js/bootstrap.min.js"></script>
+		<script src="JS/main.js"></script>
+	</body>
 </html>
