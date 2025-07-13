@@ -112,6 +112,7 @@
 		            <p class="p4 center copy nomargin"><a href='https://persona-eg.com/' target="_blank" class='footera'>Copyright © 2020 Persona-eg. All rights reserved.</a></p>
 		        </footer>	
 		</section>
+		
 		<script src="Bootstrap4.4.1/jquery-3.4.1.min.js"></script>
 	        <script src="Bootstrap4.4.1/popper.min.js"></script>
 	        <script src="Bootstrap4.4.1/js/bootstrap.min.js"></script>
