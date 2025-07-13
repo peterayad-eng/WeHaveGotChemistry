@@ -1,25 +1,45 @@
 html{
-    min-height:100%; 
     position:absolute;
     width:100%;
     display: flex;
     flex-flow: column;
-    background-image: url(../Images/back.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: helvetica;
+    min-height: 100%;
 }
 
 body{
     padding:0px;
     margin:0px;
     width:100%;
-    min-height:100%;   
-    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100%;
     display: flex;
     flex-flow: column;
     flex-grow: 1;
+    font-family: 'Helvetica'; 
+    background-image: url("../Images/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
+
+    #fixedbg{
+        padding:0px;
+    	margin:0px;
+    	max-width:100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        height:100%;
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    #content{
+        position:absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
 
         .login-content{
             margin:20%;
