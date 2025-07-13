@@ -60,7 +60,7 @@
                     <a class="navbar-brand" href="index"><h1 class="textcolor"><img class="align-content header-imgSize" src="Images/logo.jpg" alt="Web Class"></h1></a>
                     <h2 class="white username">Hello, <?=$user?></h2>
                 </div>
-                <button class="navbar-toggler backwhite" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
